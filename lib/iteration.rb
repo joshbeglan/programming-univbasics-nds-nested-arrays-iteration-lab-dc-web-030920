@@ -11,9 +11,13 @@ def join_ingredients(src)
   i = 0
   
   while i < src.length
-    j = 0
-    
-    
+    inner = src[i]
+    new_array << "I love " + inner[0] + " and " + inner[1] + " on my pizza"
+
+    i += 1
+  end
+
+  return new_array
 end
 
 def find_greater_pair(src)
