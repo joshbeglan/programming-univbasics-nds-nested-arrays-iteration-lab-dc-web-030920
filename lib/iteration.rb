@@ -41,7 +41,7 @@ def find_greater_pair(src)
       else
         larger_nums << num2
       end
-      # larger_nums << [num1, num2]
+
       j += 1
     end
     
@@ -59,4 +59,27 @@ def total_even_pairs(src)
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
+  
+ even_pairs = []
+  i = 0
+  
+  while i < src.length
+    inner = src[i]
+    j = 0
+    
+    while j < inner.length - 1
+      num1 = inner[j]
+      num2 = inner[j + 1]
+      
+      if (num1 % 2 == 0) && (num2 % 2 == 0)
+        even_pairs << inner
+      end
+      
+      j += 1
+    end
+    
+    i += 1
+  end
+  
+  return even_pairs
 end
