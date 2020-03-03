@@ -32,16 +32,16 @@ def find_greater_pair(src)
     inner = src[i]
     j = 0
     
-    while j < inner.length
-      num1 = inner[j][0]
-      num2 = inner[j][1]
+    while j < inner.length - 1
+      num1 = inner[j]
+      num2 = inner[j + 1]
       
       if num1 > num2
         larger_nums << num1
       else
         larger_nums << num2
       end
-      
+      # larger_nums << [num1, num2]
       j += 1
     end
     
