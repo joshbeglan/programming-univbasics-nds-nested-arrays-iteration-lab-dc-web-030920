@@ -60,7 +60,7 @@ def total_even_pairs(src)
   # the number was even. Review the operator documentation if you've forgotten
   # this!
   
- even_pairs = []
+  total = 0
   i = 0
   
   while i < src.length
@@ -70,9 +70,10 @@ def total_even_pairs(src)
     while j < inner.length - 1
       num1 = inner[j]
       num2 = inner[j + 1]
+      sum = num1 + num2
       
       if (num1 % 2 == 0) && (num2 % 2 == 0)
-        even_pairs << [num1, num2]
+        total += sum
       end
       
       j += 1
@@ -81,5 +82,5 @@ def total_even_pairs(src)
     i += 1
   end
   
-  return even_pairs
+  return total
 end
