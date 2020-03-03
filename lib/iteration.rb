@@ -72,7 +72,7 @@ def total_even_pairs(src)
       num2 = inner[j + 1]
       
       if (num1 % 2 == 0) && (num2 % 2 == 0)
-        even_pairs << inner
+        even_pairs << [num1, num2]
       end
       
       j += 1
